@@ -1,8 +1,0 @@
-FOR CLONE REPO IN LOCAL:
-
-git clone URL
-git status (if there is any changes staging area)
-git add .(add all the files or name that file)
-git commit-m "Any message"
-git push
-change

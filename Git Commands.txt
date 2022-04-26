@@ -1,0 +1,22 @@
+FOR CLONE REPO IN LOCAL:
+
+git clone URL
+git status (if there is any changes staging area)
+git add .(add all the files or name that file)
+git commit-m "Any message"
+git push
+
+CREATE BRANCH:
+git branch test
+git branch --v(Number of branches)
+git checkout test // gith checkout -b test1(Not exisiting)
+git status(check in which branch you are)
+
+REMOTE:
+git remote -v(Verbose name of origin)
+git remote remove origin
+git remote add <origin> <link>
+
+PULL PUSH IN BRANCH AND ORIGIN :
+git push origin branchname
+
