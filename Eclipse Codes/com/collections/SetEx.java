@@ -1,8 +1,8 @@
 package com.collections;
+
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
-import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -25,7 +25,7 @@ public class SetEx {
 	        System.out.println(hash_Set);
 	        hash_Set.removeAll(hash_Set);
 	        System.out.println(hash_Set);
-			 Iterator value = (Iterator) hash_Set.iterator();
+			 Iterator<Integer> value = (Iterator<Integer>) hash_Set.iterator();
 			 System.out.println("Iterate HashSet using iterator : ");
 			        while( value.hasNext()) {
 			            System.out.print(value.next() + " ");
@@ -39,7 +39,7 @@ public class SetEx {
               set.add("six");   
               set.add("Four");  
               set.add("Five");  
-              Iterator it = (Iterator) set.iterator();
+              Iterator<String> it = (Iterator<String>) set.iterator();
  			 System.out.println("Iterate HashSet using iterator : ");
  			        while( it.hasNext()) {
  			            System.out.print(it.next() + " ");

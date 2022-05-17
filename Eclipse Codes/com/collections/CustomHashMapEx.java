@@ -1,6 +1,7 @@
 package com.collections;
 
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class CustomHashMapEx {
 
@@ -17,7 +18,7 @@ public class CustomHashMapEx {
 		}
 		@Override
 		public String toString() {
-			return "Pinlocator [location=" + location + ", pincode=" + pincode + "]";
+			return "Pinlocator [location=" + location + ", pincode=" + pincode + "] ";
 		}
 		public String getLocation() {
 			return location;
@@ -31,25 +32,38 @@ public class CustomHashMapEx {
 		public void setPincode(Integer pincode) {
 			this.pincode = pincode;
 		}
-		
-		
-
 			
 	}
 
 	public static void main(String[] args)
 		
 	{
-		HashMap<Integer, Pinlocator> map = new HashMap<>();
-
-		map.put(101, new Pinlocator("Khatipura",302012));
-		map.put(102, new Pinlocator("Malviya Nagar",302018));
+		HashMap<Double, Pinlocator> map = new HashMap<>();
 		
-		 System.out.println("Keys: " + map.keySet());
-		 System.out.println("Keys/values: " + map.entrySet());
+		map.put(10.5689, new Pinlocator("Khatipura",302012));
+		
+		map.put(10.6767, new Pinlocator("Malviya Nagar",302018));
+		
+		try (Scanner sc = new Scanner(System.in)) {
+			System.out.println("Please enter the latitude-longitude");
+ 
+			double choice = sc.nextDouble();
+
+
+			System.out.println("Pin of location is: " + map.get(choice));
+		}
+		
+		
+//		 System.out.println("Keys: " + map.keySet());
+//		 
+//		 System.out.println("Keys/values: " + map.entrySet());
+		 
+		 
 		    
-		    
-		System.out.println(map);
+		 map.replace(10.6767, new Pinlocator("Malviya Nagar",302024));
+		 System.out.println("HashMap using replace(): " + map);
+
+	
 	}
 
 }

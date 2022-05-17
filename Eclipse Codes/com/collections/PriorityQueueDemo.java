@@ -16,7 +16,7 @@ class PriorityQueueDemo
         System.out.println ("head:" + queue.element ());
         System.out.println ("head:" + queue.peek ());
         System.out.println ("Iterating the queue elements:");
-        Iterator itr = queue.iterator ();
+        Iterator<String> itr = queue.iterator ();
         while (itr.hasNext ())
         {
             System.out.println (itr.next ());
