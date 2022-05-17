@@ -5,7 +5,6 @@ public class LinkedlistEx {
 	public static void main(String[] args) {
 	    LinkedList<String> languages = new LinkedList<>();
 
-	    // add elements in the linked list
 	    languages.add("Java");
 	    languages.add("Python");
 	    languages.add("JavaScript");
