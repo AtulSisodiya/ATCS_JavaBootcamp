@@ -1,0 +1,37 @@
+package com.Mapping.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.Mapping.entity.Teacher;
+import com.Mapping.repo.TeacherRepo;
+
+@RestController
+@RequestMapping("/teacher")
+public class TeacherController {
+	@Autowired
+	TeacherRepo repo;
+
+	@GetMapping("/")
+	public List<Teacher> getData() {
+		return repo.findAll();
+	}
+
+	@PostMapping("/")
+	public void saveData(@RequestBody Teacher obj) {
+		repo.save(obj);
+	}
+	
+	@DeleteMapping("/{id}")
+	public void deleteData(@PathVariable int id) {
+		repo.deleteById(id);
+	}
+}
